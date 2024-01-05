@@ -132,12 +132,12 @@ class StructureSystem(hub.Module):
         return all_results
 
     @serving
-    def serving_method(self, images, **kwargs):
+    def serving_method(self, images, paths, **kwargs):
         """
         Run as a service.
         """
         images_decode = [base64_to_cv2(image) for image in images]
-        results = self.predict(images_decode, **kwargs)
+        results = self.predict(images_decode, paths, **kwargs)
         return results
 
 

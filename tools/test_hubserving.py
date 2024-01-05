@@ -111,6 +111,7 @@ def main(args):
         # seed http request
         starttime = time.time()
         data = {'images': [cv2_to_base64(img)]}
+        # logger.info(json.dumps(data))
         r = requests.post(
             url=args.server_url, headers=headers, data=json.dumps(data))
         elapse = time.time() - starttime
