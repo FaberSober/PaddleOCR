@@ -144,6 +144,7 @@ class StructureSystem(hub.Module):
 if __name__ == '__main__':
     structure_system = StructureSystem()
     structure_system._initialize()
-    image_path = ['./ppstructure/docs/table/1.png']
+    # image_path = ['./ppstructure/docs/table/1.png']
+    image_path = ['/root/codes/ocr/paddle-ocr-learn/pp-structure-v2/table2.png']
     res = structure_system.predict(paths=image_path)
     print(res)
