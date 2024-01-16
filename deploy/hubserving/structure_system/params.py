@@ -22,9 +22,9 @@ from deploy.hubserving.structure_table.params import read_params as table_read_p
 def read_params():
     cfg = table_read_params()
 
-    # params for layout parser model
+    # params for layout parser model 版面分析模型
+    # picodet_lcnet_x1_0_fgd_layout_cdla: CDLA数据集训练的中文版面分析模型，可以划分为表格、图片、图片标题、表格、表格标题、页眉、脚本、引用、公式10类区域
     cfg.layout_model_dir = './inference/picodet_lcnet_x1_0_fgd_layout_cdla_infer/'
-    # cfg.layout_dict_path = './ppocr/utils/dict/layout_dict/layout_publaynet_dict.txt'
     cfg.layout_dict_path = './ppocr/utils/dict/layout_dict/layout_cdla_dict.txt'
     cfg.layout_score_threshold = 0.5
     cfg.layout_nms_threshold = 0.5
